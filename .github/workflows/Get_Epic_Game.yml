@@ -1,7 +1,7 @@
 name: Get Epic Game
 
 on:
-  schedule: # 删除本行开头的 # 号 
+  schedule: # 删除本行开头的 # 号
     - cron: "25 2 * * *" # 删除本行开头的 # 号
   push:
     branches:
@@ -55,11 +55,11 @@ jobs:
 
       # 如果需要推送到 Telegram 用来提示，取消注释以下内容
       # 这部分的内容可以查看 https://www.github.com/appleboy/telegram-action
-      # - name: Send Gift Info
-      #   if: always()
-      #   uses: appleboy/telegram-action@master
-      #   with:
-      #     to: "Chat ID"
-      #     token: "TelegramBot 的 Token"
-      #     format: markdown
-      #     message_file: workdir/games.info
+       - name: Send Gift Info
+         if: always()
+         uses: appleboy/telegram-action@master
+         with:
+           to: "584963857"
+           token: "1784489580:AAHCNkpa4XoC-9ITHAszUAXySvl1CSoTzX4"
+           format: markdown
+           message_file: workdir/games.info
